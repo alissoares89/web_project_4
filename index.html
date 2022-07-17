@@ -23,6 +23,48 @@
         </div>
       </header>
       <!-- /Header -->
+      <!-- Main -->
+  <main class="content">
+    <!-- Modal -->
+    <div class="modal">
+      <figure class="modal__figure">
+        <span class="model__figure-close">&times;</span>
+        <img
+          src="http://code.s3.yandex.net/web-code/yosemite.jpg"
+          alt="Modal Image"
+          class="modal__imgage"
+        />
+        <figcaption class="modal__figcaption">Yosemite</figcaption>
+      </figure>
+      <form class="modal__content" name="form__edit-profile" action="#">
+        <span class="modal__content-close">&times;</span>
+        <h2 class="modal__content-title">Editar Perfil</h2>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Nome"
+          value="Jacques Cousteau"
+          class="modal__input-text"
+          autocomplete="off"
+          required
+        />
+        <input
+          type="text"
+          name="description"
+          id="description"
+          placeholder="Descrição"
+          value="Explorar"
+          class="modal__input-text"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="modal__button">
+          <span class="modal__button-text">Salvar</span>
+        </button>
+      </form>
+    </div>
+    <!-- /Modal -->
       <!-- Profile -->
       <div class="profile">
         <div class="profile__image"></div>
@@ -38,5 +80,39 @@
     <!-- /Profile -->
     <!-- Elements -->
     <ul class="elements"></ul>
-    
+    <template>
+      <li class="element">
+        <img 
+          src="./images/trash.svg" 
+          alt="Trash icon"
+          class="element__trash"
+        />
+        <img
+          src="./images/kirill-pershin-1088404-unsplash.jpeg"
+          alt="Kirill Pershin Yosemite"
+          class="element__image"
+        />
+        <div class="element__info">
+          <h2 class="element__title">Vale de Yosemite</h2>
+          <img
+            src="/images/element__like.svg"
+            alt="Like"
+            class="element__like"
+          />
+        </div>
+      </li>
+    </template>
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer__content">
+      <p class="footer__copyright">
+        &copy; Copyright 2022 - Alisson Soares
+      </p>
+  </footer>
+  <!--/Footer-->
+    </div>
+    <!-- /Main -->
+    <script src="./scipts/index.js" defer></script>
   </body>
+</html>
