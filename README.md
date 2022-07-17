@@ -1,6 +1,6 @@
 # Projeto 4: EUA AFORA
 Publicado no Git 
-* [Link para o projeto no Git Pages](#)
+* [Link para o projeto no Git Pages](https://alissoares89.github.io/web_project_4/)
 ## Practicum - Yandex
 
 ### 1. Sobre o projeto:
