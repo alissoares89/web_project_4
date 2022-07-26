@@ -57,25 +57,27 @@ function callInitialCards() {
     cardElement.querySelector(".card__image").alt = item.name;
     return elements.append(cardElement);
   });
-  callPopupImage();
-  callLikeButton();
-  deleteCardButton();
+  openPopUpImage();
+  handleLikeButton();
+  deleteCard();
 }
 
 
 // ABRE O POPUP DE EDIÇÃO DE PERFIL E SALVA OS DADOS
 
-function editPopupProfile() {
+function togglePopupProfile() {
   popupEditProfile.classList.toggle("popup_opened");
+  insertName.value = profileName.textContent;
+  insertAbout.value = profileDescription.textContent;
 }
 
 function savePopup(evt) {
   profileName.textContent = insertName.value;
   profileDescription.textContent = insertAbout.value;
-  editPopupProfile();
+  togglePopupProfile();
 }
 
-editButton.addEventListener("click", editPopupProfile);
+editButton.addEventListener("click", togglePopupProfile);
 popupSaveButton.addEventListener("click", savePopup);
 
 // ABRE O POP UP DE ADIÇÃO DE CARTÃO
@@ -88,7 +90,7 @@ addButton.addEventListener("click", callPopupAddCard);
 
 // ABRE AS IMAGENS DO CARDS
 
-function callPopupImage() {
+function openPopUpImage() {
   const cardImage = document.querySelectorAll(".card__image");
   cardImage.forEach(function (item) {
     item.addEventListener("click", createPopupImage);
@@ -140,7 +142,7 @@ saveButtonAddCard.addEventListener("click", saveCard);
 
 // FAZ COM QUE OS CARDS SEJAM LIKED
 
-function callLikeButton() {
+function handleLikeButton() {
   const likeButton = document.querySelectorAll(".card__like-button");
   likeButton.forEach(function (item) {
     item.addEventListener("click", function (evt) {
@@ -151,7 +153,7 @@ function callLikeButton() {
 
 // DELETA OS CARDS
 
-function deleteCardButton() {
+function deleteCard() {
   const deleteButton = document.querySelectorAll(".card__trash");
   deleteButton.forEach(function (item) {
     item.addEventListener("click", function () {
