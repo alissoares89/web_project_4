@@ -7,7 +7,7 @@ const popupSaveButton = document.querySelector(".popup__save-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 
-const cardTemplate = document.querySelector(".card__template").content;
+const cardTemplate = document.querySelector(".card-template").content;
 const elements = document.querySelector(".elements");
 
 const insertTitle = document.querySelector(".popup__insert-title");
